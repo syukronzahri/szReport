@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SZ Report Sample</title>
+</head>
+<body>
+    <div id="report-sample"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.szreport.js"></script>
+    <script src="sample-report-data.js"></script>
+    <script>
+        $('#report-sample').szReport({
+            pageSetting: {
+                page: {height: 297, width: 210},
+                header: {height: 30},
+                body: {height: 230},
+                footer: {height: 30},
+                margin: {top: 15, bottom: 15, left: 15, right: 15},
+                border: {width: 2, color: '#ABC'}
+            },
+            rowSetting: [
+                {width: 40},
+                {width: 60},
+                {width: 60},
+                {width: 50},
+            ],
+            reportData: data,
+        });
+    </script>
+</body>
+</html>
