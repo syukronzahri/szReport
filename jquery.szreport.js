@@ -88,10 +88,8 @@
         console.log(szReportObj.rowSetting);
         console.log(szReportObj.reportData);
 
-        //for (var i = 0; i <= szReportObj.rowSetting.length; i++) {
+        /* Generate style for each column */
         for (var i = 0; i <= szReportObj.rowSetting.length; i++) {
-            //console.log(i + ": " + szReportObj.rowSetting[i].width.toString());
-            //rowStyle += "." + szReportObj.className + " table tr td:nth-child(" +  (i + 1).toString() + ") {width: " + szReportObj.rowSetting[i].width.toString() + szReportObj.unit + "; min-width: " + szReportObj.rowSetting[i].width.toString() + szReportObj.unit + "; max-width: " + szReportObj.rowSetting[i].width.toString() + szReportObj.unit + "}\n";
             rowStyle += "." + szReportObj.className + " table tr td:nth-child(" +  (Number.parseInt(key) + 1).toString() + ") {width: " + szReportObj.rowSetting[key].width.toString() + szReportObj.unit + "; min-width: " + szReportObj.rowSetting[key].width.toString() + szReportObj.unit + "; max-width: " + szReportObj.rowSetting[key].width.toString() + szReportObj.unit + "}\n";
         }
 
